@@ -1,1 +1,8 @@
-<p>xyz works!</p>
+<div> Months :
+  <select>
+    <option *ngFor="let i of months">{{i}}</option>
+  </select>
+  <p *ngIf="is_available; then true_condition else false_condition"></p>
+  <ng-template #true_condition><p>Điều kiện đúng</p></ng-template>
+  <ng-template #false_condition><p>Điều kiện sai</p></ng-template>
+</div>

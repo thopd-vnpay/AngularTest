@@ -14,7 +14,8 @@ export class MovieComponent implements OnInit {
     year: 1234
   }
   movies = fakeMovies;
-    constructor() { }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
