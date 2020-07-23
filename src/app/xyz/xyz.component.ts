@@ -11,6 +11,10 @@ export class XyzComponent implements OnInit {
     "Tháng 7", "Tháng 8", "Tháng 9",
     "Tháng 10", "Tháng 11", "Tháng 12"];
   is_available = true;
+
+  title = 'Angular 4 Project!';
+  todaydate = new Date();
+  jsonval = {name: 'Rox', age: '25', address: {a1: 'Mumbai', a2: 'Karnataka'}};
   constructor() { }
 
   ngOnInit(): void {
