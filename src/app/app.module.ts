@@ -7,20 +7,24 @@ import { MovieComponent } from './movie/movie.component';
 import { FormsModule } from "@angular/forms";
 import { XyzComponent } from './xyz/xyz.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import {MovieService} from "./movie.service";
+import { MessagesComponent } from './messages/messages.component';
+import {MessagesService} from "./messages.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     XyzComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    MessagesComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MovieService,MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
