@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {XyzComponent} from './xyz/xyz.component';
-import {MovieComponent} from './movie/movie.component';
-import {HomeComponent} from './crud/home/home.component';
+import { ExtraOptions, Routes, RouterModule } from '@angular/router';
+import { XyzComponent} from './xyz/xyz.component';
+import { MovieComponent} from './movie/movie.component';
+import { HomeComponent} from './crud/home/home.component';
 
 const routes: Routes = [
   { path: '', component: XyzComponent },
@@ -11,9 +11,11 @@ const routes: Routes = [
   { path: 'crud', loadChildren: () => import(`./crud/crud.module`).then(m => m.CrudModule) },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }];
-
+const config: ExtraOptions = {
+  useHash: false,
+};
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,config)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

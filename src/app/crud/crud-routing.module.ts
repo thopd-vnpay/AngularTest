@@ -8,20 +8,20 @@ import {UpdateComponent} from './update/update.component';
 const routes: Routes = [{
     path: '',
     component: HomeComponent,
-    // children: [
-    // {
-    //   path: 'details/:productId',
-    //   component: DetailsComponent,
-    // },
-    // {
-    //   path: 'create',
-    //   component: CreateComponent,
-    // },
-    // {
-    //   path: 'crud/update/:productId',
-    //   component: UpdateComponent,
-    // }
-    // ]
+    children: [
+    {
+      path: 'details/:productId',
+      component: DetailsComponent,
+    },
+    {
+      path: 'create',
+      component: CreateComponent,
+    },
+    {
+      path: 'crud/update/:productId',
+      component: UpdateComponent,
+    }
+    ]
   }
   // ,
   // { path: 'crud/home', component: HomeComponent },
