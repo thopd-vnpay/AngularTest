@@ -5,9 +5,9 @@ import { MovieComponent} from './movie/movie.component';
 import { HomeComponent} from './crud/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: XyzComponent },
-  { path: 'xyz', component: HomeComponent },
-  { path: 'register', component: MovieComponent },
+  { path: '', component: HomeComponent },
+  { path: 'xyz', component: XyzComponent },
+  { path: 'movies', component: MovieComponent },
   { path: 'crud', loadChildren: () => import(`./crud/crud.module`).then(m => m.CrudModule) },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }];
