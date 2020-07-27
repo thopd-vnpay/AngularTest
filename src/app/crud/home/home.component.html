@@ -19,7 +19,7 @@
       <td>{{product.description}}</td>
       <td>{{product.quantity}}</td>
       <td>
-        <button type="button" [routerLink]="['/crud/update', product.id]">Update</button>
+        <button type="button" [routerLink]="['/crud/update/', product.id]">Update</button>
         <button type="button" (click)="crudService.delete(product.id)">Remove</button>
       </td>
     </tr>
