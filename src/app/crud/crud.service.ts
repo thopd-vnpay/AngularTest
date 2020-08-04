@@ -11,7 +11,7 @@ import { Product } from './product';
 })
 export class CrudService {
 
-  private apiServer = "http://localhost:8090/SpringBootRestApi";
+  private apiServer = "http://localhost:8090/SpringBootRestApi/service";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ export class CrudService {
   constructor(private httpClient: HttpClient) { }
 
   create(product): Observable<Product> {
-    return this.httpClient.post<Product>(this.apiServer + '/products/', JSON.stringify(product), this.httpOptions)
+    return this.httpClient.post<Product>(this.apiServer + '/add', JSON.stringify(product), this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       )
@@ -39,15 +39,16 @@ export class CrudService {
       )
   }
 
-  update(id, product): Observable<Product> {
-    return this.httpClient.put<Product>(this.apiServer + '/products/' + id, JSON.stringify(product), this.httpOptions)
+  update(product): Observable<Product> {
+    return this.httpClient.post<Product>(this.apiServer + '/edit', JSON.stringify(product), this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   delete(id){
-    return this.httpClient.delete<Product>(this.apiServer + '/products/' + id, this.httpOptions)
+    console.log("SSSSSSSSSSSSSSSS:"+this.apiServer + '/delete?id=' + id);
+    return this.httpClient.get(this.apiServer + '/delete?id=' + id)
       .pipe(
         catchError(this.errorHandler)
       )

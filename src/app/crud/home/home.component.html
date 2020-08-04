@@ -1,3 +1,13 @@
+<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in with Angular 8!!</p>
+<h3>All registered users:</h3>
+<ul>
+  <li *ngFor="let user of users">
+    {{user.username}} ({{user.firstName}} {{user.lastName}})
+    - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+  </li>
+</ul>
+
 <div>
   <h1>My Products</h1>
   <button type="button" routerLink="/crud/create">Create new product</button>
@@ -17,10 +27,11 @@
       <td>{{product.id}}</td>
       <td>{{product.name}}</td>
       <td>{{product.description}}</td>
+      <td>{{product.price}}</td>
       <td>{{product.quantity}}</td>
       <td>
         <button type="button" [routerLink]="['/crud/update/', product.id]">Update</button>
-        <button type="button" (click)="crudService.delete(product.id)">Remove</button>
+        <button type="button" (click)="deleteProduct(product.id)">Remove</button>
       </td>
     </tr>
     </tbody>

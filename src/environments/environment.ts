@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://10.22.7.153:8004',
+  // socketUrl: 'http://10.22.7.153:8005',
 };
 
 /*
