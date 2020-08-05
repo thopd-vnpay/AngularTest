@@ -21,7 +21,7 @@
       <label>Quantity</label>
       <input type="text" [(ngModel)]="product.quantity" formControlName="quantity" class="form-control">
     </div>
-    <button type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit">Submit</button> <button class="btn btn-danger" (click)="goBack()">go back</button>
   </form>
-  <button (click)="goBack()">go back</button>
+
 </div>

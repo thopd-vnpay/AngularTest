@@ -1,8 +1,8 @@
 <h1>Hi {{currentUser.firstName}}!</h1>
 <p>You're logged in with Angular 8!!</p>
 <h3>All registered users:</h3>
-<ul>
-  <li *ngFor="let user of users">
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let user of users">
     {{user.username}} ({{user.firstName}} {{user.lastName}})
     - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
   </li>
@@ -10,8 +10,8 @@
 
 <div>
   <h1>My Products</h1>
-  <button type="button" routerLink="/crud/create">Create new product</button>
-  <table>
+  <button type="button" class="btn btn-primary" routerLink="/crud/create">Create new product</button>
+  <table class="table" >
     <thead>
     <tr>
       <th>#</th>
@@ -30,8 +30,8 @@
       <td>{{product.price}}</td>
       <td>{{product.quantity}}</td>
       <td>
-        <button type="button" [routerLink]="['/crud/update/', product.id]">Update</button>
-        <button type="button" (click)="deleteProduct(product.id)">Remove</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/crud/update/', product.id]">Update</button>
+        <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">Remove</button>
       </td>
     </tr>
     </tbody>
