@@ -18,6 +18,12 @@ import { ErrorInterceptor} from './_helpes/error.interceptor';
 // used to create fake backend
 import { fakeBackendProvider} from './_helpes/fake-backend';
 import { AlertComponent } from './alert/alert.component';
+import { TestformComponent } from './testform/testform.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -29,13 +35,21 @@ import { AlertComponent } from './alert/alert.component';
     LoginComponent,
     RegisterComponent,
     AlertComponent,
+    TestformComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [
     MovieService,
