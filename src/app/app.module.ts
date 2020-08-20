@@ -24,6 +24,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
+import {DatePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {MatNativeDateModule} from '@angular/material/core';
   ],
   providers: [
     MovieService,
+    DatePipe,
     MessagesService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
