@@ -25,7 +25,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {DatePipe} from '@angular/common';
-
+import {APP_BASE_HREF} from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +58,7 @@ import {DatePipe} from '@angular/common';
     MessagesService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: APP_BASE_HREF, useValue : '/' },
     // provider used to create fake backend
     fakeBackendProvider
   ],

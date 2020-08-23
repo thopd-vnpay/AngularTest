@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'form', component: TestformComponent },
-  // { path: 'xyz', component: XyzComponent },
+  { path: 'xyz', component: XyzComponent },
   // { path: 'movies', component: MovieComponent },
   { path: 'crud', loadChildren: () => import(`./crud/crud.module`).then(m => m.CrudModule) , canActivate: [AuthGuard]},
   // otherwise redirect to home
