@@ -26,6 +26,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {DatePipe} from '@angular/common';
 import {APP_BASE_HREF} from '@angular/common';
+import { HeaderComponent } from './layout/header/header.component';
+import { SidemenuComponent } from './layout/sidemenu/sidemenu.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +41,10 @@ import {APP_BASE_HREF} from '@angular/common';
     RegisterComponent,
     AlertComponent,
     TestformComponent,
+    HeaderComponent,
+    SidemenuComponent,
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     FormsModule,

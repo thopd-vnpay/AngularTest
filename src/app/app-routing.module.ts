@@ -7,6 +7,9 @@ import { RegisterComponent} from './register/register.component';
 import { LoginComponent} from './login/login.component';
 import { AuthGuard} from './_helpes/auth.guard';
 import {TestformComponent} from './testform/testform.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {SidemenuComponent} from './layout/sidemenu/sidemenu.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -14,6 +17,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'form', component: TestformComponent },
   { path: 'xyz', component: XyzComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'sidemenu', component: SidemenuComponent },
   // { path: 'movies', component: MovieComponent },
   { path: 'crud', loadChildren: () => import(`./crud/crud.module`).then(m => m.CrudModule) , canActivate: [AuthGuard]},
   // otherwise redirect to home
