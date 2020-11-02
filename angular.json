@@ -29,13 +29,27 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/bootstrap/css/bootstrap.min.css",
+              "src/assets/bootstrap/css/bootstrap-responsive.min.css",
+              "src/assets/css/theme.css",
+              "src/assets/images/icons/css/font-awesome.css"
             ],
             "scripts": [
+<<<<<<< HEAD
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/bundles.js",
               "src/assets/js/init.js",
               "src/assets/js/custom.js"
+=======
+              "src/assets/scripts/jquery-1.9.1.min.js",
+              "src/assets/scripts/jquery-ui-1.10.1.custom.min.js",
+              "src/assets/bootstrap/js/bootstrap.min.js",
+              "src/assets/scripts/flot/jquery.flot.js",
+              "src/assets/scripts/flot/jquery.flot.resize.js",
+              "src/assets/scripts/datatables/jquery.dataTables.js",
+              "src/assets/scripts/common.js"
+>>>>>>> a733d7d07879c51769750a0f75b012ce4abbe484
             ]
           },
           "configurations": {
