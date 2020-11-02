@@ -26,6 +26,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {DatePipe} from '@angular/common';
 import {APP_BASE_HREF} from '@angular/common';
+import { HeaderComponent } from './layout/header/header.component';
+import {SafeHtmlPipe, SidemenuComponent} from './layout/sidemenu/sidemenu.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AddTutorialComponent } from './pagination/add-tutorial/add-tutorial.component';
+import { TutorialDetailsComponent } from './pagination/tutorial-details/tutorial-details.component';
+import { TutorialsListComponent } from './pagination/tutorials-list/tutorials-list.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +45,14 @@ import {APP_BASE_HREF} from '@angular/common';
     RegisterComponent,
     AlertComponent,
     TestformComponent,
+    HeaderComponent,
+    SidemenuComponent,
+    SafeHtmlPipe,
+    FooterComponent,
+    HomeComponent,
+    AddTutorialComponent,
+    TutorialDetailsComponent,
+    TutorialsListComponent,
   ],
   imports: [
     FormsModule,
@@ -50,7 +66,8 @@ import {APP_BASE_HREF} from '@angular/common';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [
     MovieService,
