@@ -1,0 +1,10 @@
+<svg id="ic_trash_green" data-name="ic/trash/green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_13" data-name="Group 13" transform="translate(3 1)">
+    <path id="Stroke_1" data-name="Stroke 1" d="M13.41,16.567H1.4a1.4,1.4,0,0,1-1.4-1.4V0H14.806V15.171A1.4,1.4,0,0,1,13.41,16.567Z" transform="translate(1.316 5.321)" fill="none" stroke="#72bf00" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.36"/>
+    <path id="Stroke_3" data-name="Stroke 3" d="M17.232,3.066H0V.728A.728.728,0,0,1,.728,0H16.5a.728.728,0,0,1,.728.728Z" transform="translate(0.103 2.255)" fill="none" stroke="#72bf00" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.36"/>
+    <path id="Stroke_5" data-name="Stroke 5" d="M6.188,2.153H0V.728A.728.728,0,0,1,.728,0H5.46a.728.728,0,0,1,.728.728Z" transform="translate(5.625 0.103)" fill="none" stroke="#72bf00" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.36"/>
+    <path id="Stroke_7" data-name="Stroke 7" d="M.076,0V10.175" transform="translate(5.088 8.06)" fill="none" stroke="#72bf00" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.36"/>
+    <path id="Stroke_9" data-name="Stroke 9" d="M.076,0V10.175" transform="translate(8.643 8.06)" fill="none" stroke="#72bf00" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.36"/>
+    <path id="Stroke_11" data-name="Stroke 11" d="M.076,0V10.175" transform="translate(12.198 8.06)" fill="none" stroke="#72bf00" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.36"/>
+  </g>
+</svg>

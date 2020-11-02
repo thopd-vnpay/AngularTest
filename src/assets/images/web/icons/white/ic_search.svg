@@ -1,0 +1,8 @@
+<svg id="ic_search" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+  <rect id="ic_search_white_background" data-name="ic/search/white background" width="25" height="24" opacity="0"/>
+  <g id="Group_7" data-name="Group 7" transform="translate(2 1.5)">
+    <path id="Stroke_1" data-name="Stroke 1" d="M6.116,0,0,5.816" transform="translate(0.822 14.354)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.3"/>
+    <path id="Stroke_3" data-name="Stroke 3" d="M13.164,13.163a7.7,7.7,0,0,1-9.705.976,7.549,7.549,0,0,1-2.176-2.176,7.709,7.709,0,1,1,11.881,1.2Z" transform="translate(4.4 0.621)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.3"/>
+    <path id="Stroke_5" data-name="Stroke 5" d="M0,1.623a5.538,5.538,0,0,1,7.834,0" transform="translate(8.193 2.791)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.3"/>
+  </g>
+</svg>
