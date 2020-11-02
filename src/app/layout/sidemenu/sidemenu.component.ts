@@ -23,8 +23,9 @@ export class SidemenuComponent implements OnInit {
   preLevel = -1;
   constructor(private movieService: MovieService) { }
   createMenu(): void{
+    console.log("ASSSSSSSSSSSSSSSSSSSSSSS3"+this.menus);
     for (let i in this.menus) {
-      this.curLevel = Number(this.menus[i].menu_level);
+      this.curLevel = Number(this.menus[i].menuLevel);
       if (this.curLevel > this.preLevel) {
         if (this.res != ""){
           this.res = this.res+ "<ul id=\"togglePages"+(Number(i)-1)+"\" class=\"collapse unstyled\"><li>\n";
@@ -37,25 +38,35 @@ export class SidemenuComponent implements OnInit {
           this.res = this.res + "<li>\r\n" +
             "<a class=\"collapsed\" data-toggle=\"collapse\" href=\"#togglePages"+i+"\"><i class=\"menu-icon icon-cog\"></i><i class=\"icon-chevron-down pull-right\"></i><i class=\"icon-chevron-up pull-right\"></i>"+this.menus[i].name+"</a>";
         } else {
-          this.res = this.res + "<a href=\""+this.menus[i].detail_file+"\"><i class=\"icon-inbox\"></i>" +this.menus[i].name+ "</a>\r\n";
+          this.res = this.res + "<a href=\""+this.menus[i].detailFile+"\"><i class=\"icon-inbox\"></i>" +this.menus[i].name+ "</a>\r\n";
         }
       }
       this.preLevel = this.curLevel;
     }
     this.res = this.res + "</li></ul></li>\n";
   }
-  getMenuFromService(): void{
+  getMenuFromService(): void {
     // this.movies = this.movieService.getMovie();
-    this.movieService.getMenu().subscribe(
-      (updateMenu) =>{
-        this.menus = updateMenu;
-      }
-    );
+    const data = {
+      "Provider": "get_menu",
+      "ParamSize": "2",
+      "Page": "0",
+      "PageSize": "5",
+      "P1": "admin",
+      "P2": "1",
+    };
+    this.movieService.getMenu(data).subscribe(
+      response => {
+        console.log(response);
+        this.menus = response;
+        this.createMenu();
+      },
+      error => {
+        console.log(error);
+      });
   }
   ngOnInit(): void {
     this.getMenuFromService();
-    this.createMenu();
-    console.log(""+this.res);
   }
 
 }
